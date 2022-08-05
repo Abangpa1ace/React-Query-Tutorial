@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./App.css";
 import { HomePage } from "./components/Home.page";
+import RQDependentQueriesPage from "./components/RQDependentQueries.page";
+import RQDynamicParallelQueriesPage from "./components/RQDynamicParallelQueries.page";
 import RQParallelQueriesPage from "./components/RQParallelQueries.page";
 import { RQSuperHeroDetailPage } from "./components/RQSuperHeroDetail.page";
 import { RQSuperHeroesPage } from "./components/RQSuperHeroes.page";
@@ -21,9 +23,24 @@ function App() {
             <li>
               <Link to="/rq-super-heroes">RQ Super Heroes</Link>
             </li>
+            <li>
+              <Link to="/rq-dependent">RQ Dependent</Link>
+            </li>
+            <li>
+              <Link to="/rq-parallel">RQ Parallel</Link>
+            </li>
+            <li>
+              <Link to="/rq-dynamic-parallel">RQ Dynamic Parallel</Link>
+            </li>
           </ul>
         </nav>
         <Switch>
+          <Route path="/rq-dependent">
+            <RQDependentQueriesPage email="vishwas@example.com" />
+          </Route>
+          <Route path="/rq-dynamic-parallel">
+            <RQDynamicParallelQueriesPage heroIds={[1, 3]} />
+          </Route>
           <Route path="/rq-parallel">
             <RQParallelQueriesPage />
           </Route>

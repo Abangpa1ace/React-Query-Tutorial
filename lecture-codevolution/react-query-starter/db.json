@@ -29,5 +29,17 @@
       "id": "f3",
       "friends": "Dickson"
     }
+  ],
+  "users": [
+    {
+      "id": "vishwas@example.com",
+      "channelId": "codevolution"
+    }
+  ],
+  "channels": [
+    {
+      "id": "codevolution",
+      "courses": ["react", "vue", "svelte"]
+    }
   ]
 }
