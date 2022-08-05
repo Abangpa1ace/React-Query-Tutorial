@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./App.css";
 import { HomePage } from "./components/Home.page";
+import RQParallelQueriesPage from "./components/RQParallelQueries.page";
 import { RQSuperHeroDetailPage } from "./components/RQSuperHeroDetail.page";
 import { RQSuperHeroesPage } from "./components/RQSuperHeroes.page";
 import { SuperHeroesPage } from "./components/SuperHeroes.page";
@@ -23,6 +24,9 @@ function App() {
           </ul>
         </nav>
         <Switch>
+          <Route path="/rq-parallel">
+            <RQParallelQueriesPage />
+          </Route>
           <Route path="/rq-super-hero/:heroId">
             <RQSuperHeroDetailPage />
           </Route>
