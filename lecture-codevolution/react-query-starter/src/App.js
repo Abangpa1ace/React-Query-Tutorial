@@ -3,6 +3,7 @@ import "./App.css";
 import { HomePage } from "./components/Home.page";
 import RQDependentQueriesPage from "./components/RQDependentQueries.page";
 import RQDynamicParallelQueriesPage from "./components/RQDynamicParallelQueries.page";
+import RQPaginatedQueryPage from "./components/RQPaginatedQuery.page";
 import RQParallelQueriesPage from "./components/RQParallelQueries.page";
 import { RQSuperHeroDetailPage } from "./components/RQSuperHeroDetail.page";
 import { RQSuperHeroesPage } from "./components/RQSuperHeroes.page";
@@ -32,9 +33,18 @@ function App() {
             <li>
               <Link to="/rq-dynamic-parallel">RQ Dynamic Parallel</Link>
             </li>
+            <li>
+              <Link to="/rq-dependent">RQ Dependent</Link>
+            </li>
+            <li>
+              <Link to="/rq-paginated">RQ Paginated</Link>
+            </li>
           </ul>
         </nav>
         <Switch>
+          <Route path="/rq-paginated">
+            <RQPaginatedQueryPage />
+          </Route>
           <Route path="/rq-dependent">
             <RQDependentQueriesPage email="vishwas@example.com" />
           </Route>
