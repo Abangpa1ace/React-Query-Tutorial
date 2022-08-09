@@ -3,6 +3,7 @@ import "./App.css";
 import { HomePage } from "./components/Home.page";
 import RQDependentQueriesPage from "./components/RQDependentQueries.page";
 import RQDynamicParallelQueriesPage from "./components/RQDynamicParallelQueries.page";
+import RQInfiniteQueriesPage from "./components/RQInfiniteQueries.page";
 import RQPaginatedQueryPage from "./components/RQPaginatedQuery.page";
 import RQParallelQueriesPage from "./components/RQParallelQueries.page";
 import { RQSuperHeroDetailPage } from "./components/RQSuperHeroDetail.page";
@@ -39,9 +40,15 @@ function App() {
             <li>
               <Link to="/rq-paginated">RQ Paginated</Link>
             </li>
+            <li>
+              <Link to="/rq-infinite">RQ Infinite</Link>
+            </li>
           </ul>
         </nav>
         <Switch>
+          <Route path="/rq-infinite">
+            <RQInfiniteQueriesPage />
+          </Route>
           <Route path="/rq-paginated">
             <RQPaginatedQueryPage />
           </Route>
