@@ -10,7 +10,7 @@ const fetchCourse = (channelId) =>
 const RQDependentQueriesPage = ({ email }) => {
   const { data: user } = useQuery(["user", email], () => fetchUser(email));
   const channelId = user?.data.channelId;
-  const { data: courses } = useQuery(
+  const { data: courses, isLoading } = useQuery(
     ["courses", channelId],
     () => fetchCourse(channelId),
     {
@@ -18,7 +18,7 @@ const RQDependentQueriesPage = ({ email }) => {
     }
   );
 
-  console.log(courses);
+  console.log(isLoading, courses);
   return <div>RQDependentQueries.page</div>;
 };
 
